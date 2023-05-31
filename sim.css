@@ -1,0 +1,83 @@
+/*div{
+   border: 2px solid orange;
+}*/
+
+#title{
+   font-family: 'Pangolin', cursive;
+   color: white;
+   font-size: 50px;
+
+}
+#sim {
+   position: relative;
+   background: transparent;
+   width: 100vw;
+   height: 100vh;
+   width: 100vw;
+   height: 100vh;
+   z-index: 10;
+   overflow: hidden;
+   display: grid;
+ }
+ i {
+   position: absolute;
+   height: 120px;
+   border-radius: 0 0 999px 999px;
+   animation: animate 2s linear 2.5; 
+   top: -120px;
+   
+ }
+ 
+ @keyframes animate {
+   0% {
+     transform: translateY(-120px);
+   }
+   100% {
+     transform: translateY(calc(100vh + 120px));
+   }
+ }
+
+.ground{
+   background-image: url("soil.png");
+   background-size: 55%;
+   background-position:center;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   z-index: -1;
+  
+}
+
+ .indieFlower{
+  width: 10%;
+  max-inline-size: 100%;
+  block-size: auto;
+} 
+#flowers, .seedSpaces{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  z-index: -2;
+}
+
+
+#flowers{
+   overflow: hidden;
+   position: fixed;
+   top: 1500px;
+}
+
+#space-dropper1,#space-dropper2,#space-dropper3,#space-dropper4,#space-dropper5 {
+   height: 75px;
+   width: 75px;
+   background-color: #e3b93da8;
+   border-radius: 50%;
+   display: inline-block
+}
+h2 {
+   font-family: 'Indie Flower', cursive;
+   font-size:50px;
+   color: whitesmoke;
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="sim.css">
+   <title>Document</title> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="sim">
+   
+      <div id="title">
+         <h1>Let's Grow A Beautiful Garden</h1>
+         <div id="warning">
+            <h2 id="instructions"> All growth, starts with a tiny seed. Let's start planting! </h2>
+         </div>
+      </div>
+      <div id="sun-moon-water">
+         <img src="finalProjAssests\can.png" width="150px" id="watering-can">
+         <img src="finalProjAssests\sunshine.png" width="300px"  id="sun-button"/>  
+         <img src="finalProjAssests\moon.png" width="95px"  id="moon-button"/>
+      </div>
+      <div class="seeds">
+         <img src="finalProjAssests\seedGraphic.png" width="50px" id="soloSeed1" draggable="true">
+         <img src="finalProjAssests\seedGraphic.png" width="50px"id="soloSeed2" draggable="true">
+         <img src="finalProjAssests\seedGraphic.png" width="50px"id="soloSeed3" draggable="true">
+         <img src="finalProjAssests\seedGraphic.png" width="50px"id="soloSeed4" draggable="true">
+         <img src="finalProjAssests\seedGraphic.png" width="50px"id="soloSeed5" draggable="true"> 
+      </div>
+
+      <div id="flowers">
+         <img src="finalProjAssests\sf1.png" class="indieFlower"  >
+         <img src="finalProjAssests\sf2.png" class="indieFlower">
+         <img src="finalProjAssests\sf3.png" class="indieFlower">
+         <img src="finalProjAssests\sunflower4.png" class="indieFlower">
+         <img src="finalProjAssests\sf5.png" class="indieFlower"> 
+      </div>
+   
+      <div class="ground"  >
+         <div class="seedSpaces"> 
+            <div id="space-dropper1" ></div>
+            <div id="space-dropper2"></div>
+            <div id="space-dropper3"></div>
+            <div id="space-dropper4"></div>
+            <div id="space-dropper5"></div>
+         </div>
+
+      </div>
+   </div>
+</body>
+<script src="sim.js"></script>
+</html>
