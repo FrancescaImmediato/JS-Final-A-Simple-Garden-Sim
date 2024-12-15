@@ -1,31 +1,35 @@
-/*div{
-   border: 2px solid orange;
-}*/
 
-#title{
-   font-family: 'Pangolin', cursive;
-   color: white;
-   font-size: 50px;
-
-}
 #sim {
-   position: relative;
    background: transparent;
-   width: 100vw;
-   height: 100vh;
-   width: 100vw;
-   height: 100vh;
+   position: relative;
+   height: 98vh;
+   width: 98vw;
    z-index: 10;
    overflow: hidden;
    display: grid;
+   grid-template-columns: repeat(8, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
  }
+ #title{
+   font-family: 'Pangolin', cursive;
+   color: white;
+   grid-area: 1 / 1 / 4 / 5;
+   font-size: 2em;
+}
+h3 {
+   font-family: 'Indie Flower', cursive;
+   color: whitesmoke;
+}
+
+/* Code for rain animation */
  i {
    position: absolute;
    height: 120px;
    border-radius: 0 0 999px 999px;
    animation: animate 2s linear 2.5; 
    top: -120px;
-   
  }
  
  @keyframes animate {
@@ -37,6 +41,15 @@
    }
  }
 
+.clickables{
+   grid-area: 1 / 5 / 4 / 9;
+   padding: 2.5em;
+ }
+
+.seeds{
+   grid-area: 5 / 1 / 6 / 3;
+}
+
 .ground{
    background-image: url("soil.png");
    background-size: 55%;
@@ -45,6 +58,7 @@
    margin: 0px;
    padding: 0px;
    z-index: -1;
+   grid-area: 8 / 1 / 9 / 9;
   
 }
 
@@ -59,14 +73,20 @@
   flex-wrap: nowrap;
   align-items: baseline;
   z-index: -2;
+  position: relative;
 }
 
 
 #flowers{
-   overflow: hidden;
-   position: fixed;
-   top: 1500px;
-}
+   grid-area: 7 / 1 / 8/ 9;
+      opacity: 0;
+      transition: opacity 3s ease-in-out; /* Gradual transition */
+    }
+    
+    #flowers.visible {
+      opacity: 1;
+    }
+
 
 #space-dropper1,#space-dropper2,#space-dropper3,#space-dropper4,#space-dropper5 {
    height: 75px;
@@ -75,9 +95,4 @@
    border-radius: 50%;
    display: inline-block
 }
-h2 {
-   font-family: 'Indie Flower', cursive;
-   font-size:50px;
-   color: whitesmoke;
 
-}

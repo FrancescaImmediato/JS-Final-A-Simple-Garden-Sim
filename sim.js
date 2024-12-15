@@ -1,7 +1,7 @@
 document.body.style.backgroundSize = "cover";
 let wholeBG = document.body.style.backgroundImage;
-const moonButton = document.getElementById("moon-button");
-const sunButton = document.getElementById("sun-button");
+const moonButton = document.getElementById("moon");
+const sunButton = document.getElementById("sun");
 //sun bg picture
 const sunBg = "url('daySky.jpg')"
 //night bg picture
@@ -10,11 +10,15 @@ const moonBg = "url('nightSky.jpg')";
 let sunshine=false;
 //starting background 
 document.body.style.backgroundImage = moonBg ;
+
 //SET UP FOR FLOWER "GROWTH"
-let flowersContainer = document.getElementById('flowers')
+
 function completeSimGrowth () {
+  let flowersContainer = document.getElementById('flowers');
+  
   function moveFlowers() { 
-   flowersContainer.style.top = "1000px";}
+    flowersContainer.classList.add('visible');
+   }
 if (allSeedsPlanted){
  console.log('SEEDS DONE');
 }else console.log("NEED MORE SEEDS");
@@ -67,7 +71,7 @@ function isItTrue (){
 let instructions = document.getElementById("instructions");
 //whole screen 
 let rainContainer = document.getElementById("sim")
-let wateringCan = document.getElementById("watering-can")
+let wateringCan = document.getElementById("water")
 
 //Make seeds (1-5) draggable to seeds spots
 
@@ -182,7 +186,7 @@ let hasRained = false;
       "linear-gradient(transparent, white)",
     ];
 
-    const amount = 100; // amount of raindops
+    const amount = 100; // amount of raindrops
     let i = 0;
 
     // Looping and creating the raindrop then adding to the rainContainer
